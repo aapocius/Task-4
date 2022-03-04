@@ -25,7 +25,7 @@ fetch(ENDPOINT)
           tr.innerHTML =
           
           `
-           <td>${x.brand}</td>
+           <td>${x.brand.bold()}</td>
            <td>${x.models.map(y=>`${y}`).join(', ')}</td>
           `
           dataPlace.append(tr);
