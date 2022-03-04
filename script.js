@@ -26,7 +26,7 @@ fetch(ENDPOINT)
           
           `
            <td>${x.brand}</td>
-            <td>${x.models}</td>
+           <td>${x.models.map(y=>`${y}`).join(', ')}</td>
           `
           dataPlace.append(tr);
           
@@ -35,52 +35,3 @@ fetch(ENDPOINT)
   })
 
   .catch(e => console.log(e.message))
-
-
-
-
-//   const ENDPOINT = "cars.json";
-
-
-
-// fetch(ENDPOINT)
-
-//   .then(response => response.json())
-
-//   .then(data => {
-
-//     for (let x of data) {
-
-//       let slide = document.createElement("div");
-
-//       let output = document.getElementById("output");
-
-
-
-//       slide.innerHTML = `
-
-//         <div  class="slide" id="slide">
-
-//           <h1 class="brand">${x.brand}</h1>
-
-//           <h3 class="model">
-
-//            <ul>
-
-//              ${x.models.map(x => `<li>${x}</li>`).join("")}
-
-//            </ul>
-
-//           </h3>
-
-//         </div>`;
-
-//       output.append(slide);
-
-//     }
-
-//     console.log(data);
-
-//   })
-
-//   .catch(e => console.log(e));
