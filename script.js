@@ -22,11 +22,11 @@ fetch(ENDPOINT)
  data.map(x => {
           var tr = document.createElement('tr');
           
-          tr.innerHTML =
+          tr.innerHTML = 
           
           `
-           <td>${x.brand.bold()}</td>
-           <td>${x.models.map(y=>`${y}`).join(', ')}</td>
+           <td id="brand">${x.brand.bold()}</td>
+            <td>${x.models.map(y=>`${y}`).join(', ')}</td>
           `
           dataPlace.append(tr);
           
