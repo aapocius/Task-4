@@ -22,7 +22,7 @@ fetch(ENDPOINT)
  data.map(x => {
           var tr = document.createElement('tr');
           
-          tr.innerHTML = 
+          tr.innerHTML =
           
           `
            <td>${x.brand}</td>
